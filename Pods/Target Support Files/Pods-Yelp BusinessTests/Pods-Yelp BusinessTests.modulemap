@@ -1,0 +1,6 @@
+framework module Pods_Yelp_BusinessTests {
+  umbrella header "Pods-Yelp BusinessTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
