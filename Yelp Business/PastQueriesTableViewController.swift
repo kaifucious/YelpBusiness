@@ -25,7 +25,7 @@ class PastQueriesTableViewController: UITableViewController
         self.pastQueries = Database.fetchPastQueries()
     }
 
-    // MARK: - Table view data source
+    // MARK: - UITableViewDelegate/DataSource
     override func numberOfSections(in tableView: UITableView) -> Int
     {
         return 1

@@ -10,14 +10,15 @@ import UIKit
 import CDYelpFusionKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
 
     var window: UIWindow?
     var yelpClient: CDYelpAPIClient?
     
     static let shared = AppDelegate()
     
-    /// App Defaults
+    // MARK: -App Defaults
     struct Default {
         static let yelpApiKey = "YELP_API_KEY"
         static let fontName = "Verdana"
@@ -52,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    // MARK: -Theme Application
     private func applyTheme()
     {
         let foregroundColor = AppDelegate.Default.color

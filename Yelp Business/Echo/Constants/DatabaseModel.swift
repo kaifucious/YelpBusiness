@@ -21,6 +21,7 @@ class DatabaseModel: Object
     }
 }
 
+// These structs are for Offline past queries.
 struct DatabasePastQuery
 {
     var queryText: String = ""

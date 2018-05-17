@@ -303,7 +303,8 @@ extension QueryViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+                        sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
         
         return CGSize(width: LayoutConstants.collectionViewCellWidth,
                       height: LayoutConstants.collectionViewCellHeight)
