@@ -10,7 +10,7 @@ import UIKit
 
 class PastQueriesTableViewCell: UITableViewCell
 {
-    @IBOutlet weak var pastQueryLabel: Label!
+    @IBOutlet private weak var pastQueryLabel: Label!
     
     override func awakeFromNib()
     {
