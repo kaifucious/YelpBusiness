@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import CDYelpFusionKit
 import RealmSwift
 
-class DatabaseModel: Object
+protocol Configurable { }
+
+extension CDYelpBusiness: Configurable { }
+
+class DatabaseModel: Object, Configurable
 {
     // Read/Write Properties
     @objc dynamic var db_primary_key: String = ""
@@ -22,13 +27,13 @@ class DatabaseModel: Object
 }
 
 // These structs are for Offline past queries.
-struct DatabasePastQuery
+struct DatabasePastQuery: Configurable
 {
     var queryText: String = ""
     var businesses: [YelpBusiness] = []
 }
 
-struct YelpBusiness
+struct YelpBusiness: Configurable
 {
     var name: String = ""
     var phone: String = ""

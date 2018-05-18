@@ -17,8 +17,10 @@ class PastQueriesTableViewCell: UITableViewCell
         super.awakeFromNib()
     }
 
-    func configure(pastQuery: DatabasePastQuery)
+    func configure<T: Configurable>(pastQuery: T)
     {
+        guard let pastQuery = pastQuery as? DatabasePastQuery else { return }
+        
         self.pastQueryLabel.text = pastQuery.queryText
     }
 }

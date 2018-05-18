@@ -28,7 +28,7 @@ class QueryCollectionViewCell: UICollectionViewCell
     @IBOutlet private weak var businessIsOpenImageView: ImageView!
     
     // -MARK: -Cell Configuring
-    func configure(business: Any)
+    func configure<T: Configurable>(business: T)
     {
         let businessMapGestureRecognizer = UITapGestureRecognizer()
         businessMapGestureRecognizer.addTarget(self, action: #selector(self.businessLocationImageViewTapped(_:)))
