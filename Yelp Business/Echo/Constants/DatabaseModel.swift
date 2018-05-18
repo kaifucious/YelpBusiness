@@ -14,7 +14,7 @@ protocol Configurable { }
 
 extension CDYelpBusiness: Configurable { }
 
-class DatabaseModel: Object, Configurable
+class DatabaseModel: Object
 {
     // Read/Write Properties
     @objc dynamic var db_primary_key: String = ""
