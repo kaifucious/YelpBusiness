@@ -110,11 +110,15 @@ class Database: Observable
                     
                     if let jsonBusiness = jsonBusiness {
                         for business in jsonBusiness {
-                            var yelpBusiness = YelpBusiness()
-                            yelpBusiness.name = business["name"] as? String ?? ""
-                            yelpBusiness.phone = business["phone"] as? String ?? ""
-                            yelpBusiness.rating = business["rating"] as? Double ?? 0.0
-                            yelpBusiness.categories = business["categories"] as? [String] ?? []
+                            let name = business["name"] as? String ?? ""
+                            let phone = business["phone"] as? String ?? ""
+                            let rating = business["rating"] as? Double ?? 0.0
+                            let categories = business["categories"] as? [String] ?? []
+                            
+                            let yelpBusiness = YelpBusiness(name: name,
+                                                            phone: phone,
+                                                            rating: rating,
+                                                            categories: categories)
                             
                             pastQuery.businesses.append(yelpBusiness)
                         }
@@ -148,11 +152,15 @@ class Database: Observable
                    
                     if let businesses = jsonBusinesses {
                         for business in businesses {
-                            var yelpBusiness = YelpBusiness()
-                            yelpBusiness.name = business["name"] as? String ?? ""
-                            yelpBusiness.phone = business["phone"] as? String ?? ""
-                            yelpBusiness.rating = business["rating"] as? Double ?? 0.0
-                            yelpBusiness.categories = business["categories"] as? [String] ?? []
+                            let name = business["name"] as? String ?? ""
+                            let phone = business["phone"] as? String ?? ""
+                            let rating = business["rating"] as? Double ?? 0.0
+                            let categories = business["categories"] as? [String] ?? []
+                            
+                            let yelpBusiness = YelpBusiness(name: name,
+                                                            phone: phone,
+                                                            rating: rating,
+                                                            categories: categories)
                             
                             pastQuery.businesses.append(yelpBusiness)
                         }

@@ -35,8 +35,8 @@ struct DatabasePastQuery: Configurable
 
 struct YelpBusiness: Configurable
 {
-    var name: String = ""
-    var phone: String = ""
-    var rating: Double = 0.0
-    var categories: [String] = []
+    let name: String!
+    let phone: String!
+    let rating: Double!
+    let categories: [String]!
 }
