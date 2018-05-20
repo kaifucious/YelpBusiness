@@ -170,7 +170,7 @@ extension EchoObject
                                             object: dispatcher,
                                             userInfo: userInfo)
 
-            Echo.log(message: "\(dispatcher.name) emitted an Object \(self), intended for \(intendedObserverNames) after \(after)s.")
+            Echo.log(message: "\(dispatcher.name) emitted an Object \(self), intended for \(intendedObserverNames ?? ["all observers"]) after \(after)s.")
         }
     }
 }

@@ -12,7 +12,6 @@ import CDYelpFusionKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
-
     var window: UIWindow?
     var yelpClient: CDYelpAPIClient?
     
@@ -48,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         let apiKey = Default.valueForInfoKey(Default.yelpApiKey) as? String ?? ""
         AppDelegate.shared.yelpClient = CDYelpAPIClient(apiKey: apiKey)
         
-        self.applyTheme()
+        AppDelegate.shared.applyTheme()
     
         return true
     }
